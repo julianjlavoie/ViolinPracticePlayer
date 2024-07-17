@@ -6,15 +6,18 @@ from play import play
 from configure import configure
 
 
-# TODO: add git integration, both local and web
-# TODO: Use curses module to make terminal more interactive. 
+# DONE: add git integration, both local and web
+# TODO: Secondary -Use curses module to make terminal more interactive. 
 # https://docs.python.org/3/library/curses.html
-# TODO: Add an init for the pieces and accompaniment if not set
-# TODO: ADD a print line with version, author, pieces directories
+# TODO: Secondary -prompt for the pieces and accompaniment directory paths if not set
+# TODO: Secondary -ADD a print line with version, author, pieces directories
+
+print("\n")
 
 while True:
-    action,file,ftype = welcome()
+    action,file,ptype = welcome()
     if action == "play":
-        play(file, ftype)
+        play(file, ptype)
     if action == "configure":
-        configure(file, ftype)
+        configure(file, ptype)
+    print("______________________________________________________\n")

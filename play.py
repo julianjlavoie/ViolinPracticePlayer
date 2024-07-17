@@ -1,15 +1,20 @@
 """
 Author: Julian Lavoie
 """
-# from pydub import AudioSegment
-# from pydub import playback
+from pydub import AudioSegment
+from pydub import playback
+import os
 
 def play(file, ftype):
     """
     Play a file
     """
+    HOME_PATH = os.path.expanduser("~")
+    path_of_dir = os.fspath(f"{HOME_PATH}/Music/{ftype.capitalize()}")
 
-    # song = AudioSegment.from_mp3('soundFiles/Minuet2Bach.mp3')
+    song = AudioSegment.from_mp3(f"{path_of_dir}/{file}")
+    playback.play(song)
+    # TODO Play in segments using config file
 
     # seconds = 5
     # seg_length = seconds * 1000
