@@ -1,9 +1,11 @@
 """
 Author: Julian Lavoie
 """
+
 from pydub import AudioSegment
 from pydub import playback
 import os
+
 
 def play(file, ftype):
     """
@@ -14,6 +16,7 @@ def play(file, ftype):
 
     song = AudioSegment.from_mp3(f"{path_of_dir}/{file}")
     playback.play(song)
+
     # TODO Play in segments using config file
 
     # seconds = 5
