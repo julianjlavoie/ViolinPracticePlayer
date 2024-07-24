@@ -1,7 +1,10 @@
-import unittest
-from welcome import welcome
+import welcome
 
-class test_welcome(unittest.TestCase):
-    def testGavot(self):
-        self.assertEqual(welcome())
 
+def inc(x):
+    return x + 1
+
+
+def test_answer():
+    assert inc(3) == 4
+    assert inc(3) == 5

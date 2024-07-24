@@ -5,3 +5,5 @@ PracticePlayer.db
 *.wav
 Tests
 VPPEnv
+Tests/test_main.py
+__pycache__
