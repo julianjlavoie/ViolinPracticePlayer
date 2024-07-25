@@ -16,9 +16,9 @@ from configure import configure
 print("\n")
 
 while True:
-    action, file, ptype = welcome()
+    action, file, ptype, has_config = welcome()
     if action == "play":
-        play(file, ptype)
+        play(file, ptype, has_config)
     if action == "configure":
         configure(file, ptype)
     print("______________________________________________________\n")
